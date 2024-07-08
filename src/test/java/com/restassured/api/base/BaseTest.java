@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.restassured.api.actions.Assertions;
 import com.restassured.api.endpoint.APIConstants;
+import com.restassured.api.module.DeserilizedResponse;
 import com.restassured.api.module.Payloads;
 
 import io.restassured.RestAssured;
@@ -21,6 +22,7 @@ public class BaseTest {
 	public Assertions assertions;
 	public JsonPath jsonPath;
 	public Payloads payloads;
+	public DeserilizedResponse deserilizedResponse;
 
 	@BeforeTest
 	public void setupConfiguration() {
@@ -34,7 +36,19 @@ public class BaseTest {
 
 	}
 
-	public void generateToken() {
+	public String generateToken() {
+		payloads = new Payloads();
+		deserilizedResponse = new DeserilizedResponse();
+		requestSpecification = RestAssured.given();
+		requestSpecification.baseUri(APIConstants.BASE_URL);
+		requestSpecification.basePath(APIConstants.AUTH_URL);
+		requestSpecification.contentType(ContentType.JSON);
+		requestSpecification.body(payloads.authenticationPayLoad());
+
+		response = requestSpecification.when().log().all().post();
+
+		String generatedToken = deserilizedResponse.captureToken(response.asString());
+		return generatedToken;
 
 	}
 }

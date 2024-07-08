@@ -18,7 +18,7 @@ public class CreateNewBooking extends BaseTest {
 
 		// given
 		requestSpecification.basePath(APIConstants.CREATE_OR_UPDATE_BOOKING);
-		requestSpecification.body(payloads.generatePayload());
+		requestSpecification.body(payloads.generatePayloadForCreateBooking());
 
 		// when
 		response = requestSpecification.when().log().all().post();
@@ -28,7 +28,7 @@ public class CreateNewBooking extends BaseTest {
 		validatableResponse.statusCode(200);
 
 		// deserialization
-		BookingResponse bookingResponse = payloads.bookingResponseDeserialized(response.asString());
+		BookingResponse bookingResponse = deserilizedResponse.bookingResponseDeserialized(response.asString());
 
 		// AssertJ
 		assertThat(bookingResponse.getBookingid()).isNotNull();
