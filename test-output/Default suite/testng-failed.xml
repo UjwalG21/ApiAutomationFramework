@@ -5,8 +5,8 @@
     <classes>
       <class name="com.restassured.api.tests.integration.IntegrationTestCases">
         <methods>
-          <include name="testUpdateBookingById" invocation-numbers="0"/>
           <include name="setupConfiguration"/>
+          <include name="testCreateBookingIntoSystem" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.restassured.api.tests.integration.IntegrationTestCases -->
     </classes>

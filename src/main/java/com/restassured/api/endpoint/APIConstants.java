@@ -10,4 +10,5 @@ public class APIConstants {
 
 	public static String AUTH_URL = "/auth";
 
+	public static String DELETE_BOOKING = "/booking";
 }

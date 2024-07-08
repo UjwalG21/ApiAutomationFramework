@@ -98,8 +98,40 @@ public class IntegrationTestCases extends BaseTest {
 	@Test(groups = "integration", priority = 3)
 	@Description("Delete the booking information using ID")
 	public void testDeleteBookingById(ITestContext iTestContext) {
-		System.out.println(iTestContext.getAttribute("token"));
+
+		String token = iTestContext.getAttribute("token").toString();
+		String bookingId = iTestContext.getAttribute("bookingid").toString();
+		String deleteBooking = APIConstants.DELETE_BOOKING + "/" + bookingId;
+
+		// Given
+		requestSpecification.basePath(deleteBooking);
+		requestSpecification.cookie("token", token);
+
+		// when
+		response = requestSpecification.log().all().delete();
+
+		// then
+		validatableResponse = response.then().log().all();
+		validatableResponse.statusCode(201);
 
 	}
 
+	@Test(groups = "integration", priority = 4)
+	@Description("Verify the deleted booking information")
+	public void testDisplayDeletedBookingInformation(ITestContext iTestContext) {
+
+		String bookingId = iTestContext.getAttribute("bookingid").toString();
+		String validateBooking = APIConstants.GET_BOOKING + "/" + bookingId;
+
+		// Given
+		requestSpecification.basePath(validateBooking);
+
+		// when
+		response = requestSpecification.log().all().get();
+
+		// then
+		validatableResponse = response.then().log().all();
+		validatableResponse.statusCode(404);
+
+	}
 }

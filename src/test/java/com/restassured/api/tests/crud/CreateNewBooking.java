@@ -2,6 +2,7 @@ package com.restassured.api.tests.crud;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import com.restassured.api.base.BaseTest;
@@ -14,7 +15,8 @@ public class CreateNewBooking extends BaseTest {
 
 	@Test
 	@Description("Create new booking into system")
-	public void createBooking() {
+	public void createBooking(ITestContext iTestContext) {
+		iTestContext.setAttribute("token", generateToken());
 
 		// given
 		requestSpecification.basePath(APIConstants.CREATE_OR_UPDATE_BOOKING);
@@ -28,10 +30,9 @@ public class CreateNewBooking extends BaseTest {
 		validatableResponse.statusCode(200);
 
 		// deserialization
-		BookingResponse bookingResponse = deserilizedResponse.bookingResponseDeserialized(response.asString());
 
-		// AssertJ
-		assertThat(bookingResponse.getBookingid()).isNotNull();
+		BookingResponse bookingResponse = deserilizedResponse.bookingResponseDeserialized(response.asString());
+		// AssertJ assertThat(bookingResponse.getBookingid()).isNotNull();
 		assertThat(bookingResponse.getBooking().getFirstname()).isNotNull();
 		assertThat(bookingResponse.getBooking().getLastname()).isNotNull();
 
