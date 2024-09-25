@@ -1,114 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-08T16:38:25 IST" name="API Automation Suite" finished-at="2024-07-08T16:38:41 IST" duration-ms="15439">
+  <suite started-at="2024-09-23T15:51:16 IST" name="Default suite" finished-at="2024-09-23T15:51:23 IST" duration-ms="7602">
     <groups>
-      <group name="integration">
-        <method signature="IntegrationTestCaseTemplate.testCreateBooking()[pri:0, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" name="testCreateBooking" class="com.restassured.api.tests.integration.IntegrationTestCaseTemplate"/>
-        <method signature="IntegrationTestCases.testCreateBookingIntoSystem(org.testng.ITestContext)[pri:0, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" name="testCreateBookingIntoSystem" class="com.restassured.api.tests.integration.IntegrationTestCases"/>
-        <method signature="IntegrationTestCaseTemplate.testVerifyBookingId()[pri:1, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" name="testVerifyBookingId" class="com.restassured.api.tests.integration.IntegrationTestCaseTemplate"/>
-        <method signature="IntegrationTestCases.testVerifyBookingInformationUsingId(org.testng.ITestContext)[pri:1, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" name="testVerifyBookingInformationUsingId" class="com.restassured.api.tests.integration.IntegrationTestCases"/>
-        <method signature="IntegrationTestCaseTemplate.testUpdateBookingById()[pri:2, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" name="testUpdateBookingById" class="com.restassured.api.tests.integration.IntegrationTestCaseTemplate"/>
-        <method signature="IntegrationTestCases.testUpdateBookingById(org.testng.ITestContext)[pri:2, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" name="testUpdateBookingById" class="com.restassured.api.tests.integration.IntegrationTestCases"/>
-        <method signature="IntegrationTestCaseTemplate.testDeletwBookingById()[pri:3, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" name="testDeletwBookingById" class="com.restassured.api.tests.integration.IntegrationTestCaseTemplate"/>
-        <method signature="IntegrationTestCases.testDeleteBookingById(org.testng.ITestContext)[pri:3, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" name="testDeleteBookingById" class="com.restassured.api.tests.integration.IntegrationTestCases"/>
-        <method signature="IntegrationTestCases.testDisplayDeletedBookingInformation(org.testng.ITestContext)[pri:4, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" name="testDisplayDeletedBookingInformation" class="com.restassured.api.tests.integration.IntegrationTestCases"/>
-      </group> <!-- integration -->
     </groups>
-    <test started-at="2024-07-08T16:38:25 IST" name="Rest Assured Test" finished-at="2024-07-08T16:38:41 IST" duration-ms="15439">
-      <class name="com.restassured.api.tests.integration.IntegrationTestCaseTemplate">
-        <test-method signature="testCreateBooking()[pri:0, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" started-at="2024-07-08T16:38:41 IST" name="testCreateBooking" finished-at="2024-07-08T16:38:41 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCreateBooking -->
-        <test-method signature="testVerifyBookingId()[pri:1, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" started-at="2024-07-08T16:38:41 IST" name="testVerifyBookingId" finished-at="2024-07-08T16:38:41 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testVerifyBookingId -->
-        <test-method signature="testUpdateBookingById()[pri:2, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" started-at="2024-07-08T16:38:41 IST" name="testUpdateBookingById" finished-at="2024-07-08T16:38:41 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUpdateBookingById -->
-        <test-method signature="testDeletwBookingById()[pri:3, instance:com.restassured.api.tests.integration.IntegrationTestCaseTemplate@8dbfffb]" started-at="2024-07-08T16:38:41 IST" name="testDeletwBookingById" finished-at="2024-07-08T16:38:41 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDeletwBookingById -->
-      </class> <!-- com.restassured.api.tests.integration.IntegrationTestCaseTemplate -->
-      <class name="com.restassured.api.tests.crud.CreateNewBooking">
-        <test-method is-config="true" signature="setupConfiguration()[pri:0, instance:com.restassured.api.tests.crud.CreateNewBooking@5dcd8c7a]" started-at="2024-07-08T16:38:25 IST" name="setupConfiguration" finished-at="2024-07-08T16:38:26 IST" duration-ms="568" status="PASS">
+    <test started-at="2024-09-23T15:51:16 IST" name="Default test" finished-at="2024-09-23T15:51:23 IST" duration-ms="7602">
+      <class name="com.restassured.api.test.cases.GetAllBookingTestCases">
+        <test-method is-config="true" signature="setupConfiguration()[pri:0, instance:com.restassured.api.test.cases.GetAllBookingTestCases@59b38691]" started-at="2024-09-23T15:51:16 IST" name="setupConfiguration" finished-at="2024-09-23T15:51:16 IST" duration-ms="583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupConfiguration -->
-        <test-method signature="createBooking(org.testng.ITestContext)[pri:0, instance:com.restassured.api.tests.crud.CreateNewBooking@5dcd8c7a]" started-at="2024-07-08T16:38:26 IST" name="createBooking" finished-at="2024-07-08T16:38:30 IST" duration-ms="4044" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4f82663e]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="getAllBookings()[pri:0, instance:com.restassured.api.test.cases.GetAllBookingTestCases@59b38691]" started-at="2024-09-23T15:51:16 IST" name="getAllBookings" finished-at="2024-09-23T15:51:23 IST" duration-ms="6907" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createBooking -->
-      </class> <!-- com.restassured.api.tests.crud.CreateNewBooking -->
-      <class name="com.restassured.api.tests.integration.IntegrationTestCases">
-        <test-method signature="testCreateBookingIntoSystem(org.testng.ITestContext)[pri:0, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" started-at="2024-07-08T16:38:30 IST" name="testCreateBookingIntoSystem" finished-at="2024-07-08T16:38:33 IST" duration-ms="3007" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4f82663e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCreateBookingIntoSystem -->
-        <test-method signature="testVerifyBookingInformationUsingId(org.testng.ITestContext)[pri:1, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" started-at="2024-07-08T16:38:33 IST" name="testVerifyBookingInformationUsingId" finished-at="2024-07-08T16:38:35 IST" duration-ms="1598" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4f82663e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testVerifyBookingInformationUsingId -->
-        <test-method signature="testUpdateBookingById(org.testng.ITestContext)[pri:2, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" started-at="2024-07-08T16:38:35 IST" name="testUpdateBookingById" finished-at="2024-07-08T16:38:37 IST" duration-ms="2069" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4f82663e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUpdateBookingById -->
-        <test-method signature="testDeleteBookingById(org.testng.ITestContext)[pri:3, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" started-at="2024-07-08T16:38:37 IST" name="testDeleteBookingById" finished-at="2024-07-08T16:38:39 IST" duration-ms="2557" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4f82663e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDeleteBookingById -->
-        <test-method signature="testDisplayDeletedBookingInformation(org.testng.ITestContext)[pri:4, instance:com.restassured.api.tests.integration.IntegrationTestCases@41d426b5]" started-at="2024-07-08T16:38:39 IST" name="testDisplayDeletedBookingInformation" finished-at="2024-07-08T16:38:41 IST" duration-ms="1426" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4f82663e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDisplayDeletedBookingInformation -->
-      </class> <!-- com.restassured.api.tests.integration.IntegrationTestCases -->
-    </test> <!-- Rest Assured Test -->
-  </suite> <!-- API Automation Suite -->
+        </test-method> <!-- getAllBookings -->
+      </class> <!-- com.restassured.api.test.cases.GetAllBookingTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

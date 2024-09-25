@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.restassured.api.tests.integration.IntegrationTestCases">
+      <class name="com.restassured.api.test.cases.GetBookingByIdTestCases">
         <methods>
           <include name="setupConfiguration"/>
-          <include name="testCreateBookingIntoSystem" invocation-numbers="0"/>
+          <include name="getAllBookings"/>
         </methods>
-      </class> <!-- com.restassured.api.tests.integration.IntegrationTestCases -->
+      </class> <!-- com.restassured.api.test.cases.GetBookingByIdTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
