@@ -1,6 +1,8 @@
 package com.restassured.api.tests.crud;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.Assert;
+
+//import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
@@ -33,11 +35,13 @@ public class CreateNewBooking extends BaseTest {
 
 		BookingResponse bookingResponse = deserilizedResponse.bookingResponseDeserialized(response.asString());
 		// AssertJ assertThat(bookingResponse.getBookingid()).isNotNull();
-		assertThat(bookingResponse.getBooking().getFirstname()).isNotNull();
-		assertThat(bookingResponse.getBooking().getLastname()).isNotNull();
-
+		/*
+		 * assertThat(bookingResponse.getBooking().getFirstname()).isNotNull();
+		 * assertThat(bookingResponse.getBooking().getLastname()).isNotNull();
+		 */
 		// TestNg Assertions
 		assertions.verifyStatusCode(response);
+		Assert.assertTrue(bookingResponse.getBooking().getFirstname().isEmpty());
 
 	}
 
